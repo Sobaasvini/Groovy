@@ -1,0 +1,22 @@
+import java.util.Random;
+Random rand = new Random();
+Scanner sc = new Scanner(System.in)
+int randomguess = rand.nextInt(100)+1
+int guess = 0;
+int attempt = 0;
+println "guess a number between 1 t0 100"
+while(guess!=randomguess){
+    println "enter guess"
+    guess=sc.nextInt();
+    if(guess<randomguess){
+        println "Too low"
+        attempt++
+    }
+    else if(guess>randomguess){
+        println "Too high"
+        attempt++
+    }
+    else{
+        println "Correct! You guessed the number in ${attempt} attempts. "
+    }
+}
