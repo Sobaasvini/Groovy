@@ -1,0 +1,25 @@
+Scanner sc = new Scanner(System.in)
+def tax_amount=0;
+println "enter your salary"
+def salary = sc.nextInt();
+if(salary<=250000){
+    println "No tax"
+}
+else if(salary>250000 && salary<=500000){
+   println " Tax Rate: 5% " 
+   tax_amount=(salary*(5/100))
+   println" Tax Amount: $tax_amount "
+   println"Net Salary after Tax:${salary-tax_amount}"
+}
+else if(salary>500000 && salary<=1000000){
+   println " Tax Rate: 10% " 
+   tax_amount=(salary*(10/100))
+   println" Tax Amount: $tax_amount "
+   println"Net Salary after Tax:${salary-tax_amount}"
+}
+else {
+   println " Tax Rate: 20% " 
+   tax_amount=(salary*(20/100))
+   println" Tax Amount: $tax_amount "
+   println"Net Salary after Tax:${salary-tax_amount}"
+}
