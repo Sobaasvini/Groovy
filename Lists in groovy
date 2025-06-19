@@ -1,0 +1,13 @@
+
+def List = [2,3,4,5,6,2,3,5]
+duplicates=[]
+for(int i=0;i<List.size();i++){
+    for(int j=i+1;j<List.size();j++){
+        if(List[i].equals(List[j]) && !duplicates.contains(List[i])){
+            duplicates.add(List[i])
+        }
+    }
+}
+            for( k in duplicates){
+            print " ${k}"
+            }
