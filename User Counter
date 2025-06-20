@@ -1,0 +1,14 @@
+class User{
+    static int counter;
+    User(){
+        counter++;
+    }
+     int Usercount(){
+         print " total number of users created : "
+        return counter
+    }
+}
+def u1 = new User()
+def u2 = new User()
+def u3 = new User()
+println u1.Usercount()
