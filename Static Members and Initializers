@@ -1,0 +1,13 @@
+class UserSession{
+    static def activeSessions = 0;
+    UserSession(){
+        activeSessions++;
+    }
+    static int count(){
+    return activeSessions 
+ }
+}
+new UserSession()
+new UserSession()
+new UserSession()
+println UserSession.count()
