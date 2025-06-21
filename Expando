@@ -1,0 +1,9 @@
+def Smartphone = new Expando();
+Smartphone.brand="vivo";
+Smartphone.os="android";
+Smartphone.price=21000;
+Smartphone.details = { -> println "brand: ${Smartphone.brand}\nprice: ${Smartphone.price} "}
+Smartphone.upgradeOs = { String Os -> println " the os is upgrade from ${Smartphone.os} to ${Os}"   }
+Smartphone.details();
+Smartphone.upgradeOs("ios");
+                   
