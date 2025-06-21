@@ -1,0 +1,16 @@
+class Laptop{
+    def name= "lenova"
+    def methodMissing(String name,def args){
+      return  "property $name in not present"
+    }
+    def invokeMethod(String name,def args){
+         return  "trying to invoke a method $name which is not present"
+    }
+    void type(){
+        println " typing "
+    }
+}
+def lap = new Laptop()
+println lap.name
+println lap.series('hello')
+println lap.invokeMethod("hey",null)
