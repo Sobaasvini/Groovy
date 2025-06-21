@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class BankAccount{
+    def balance=10000;
+    int deposit(int deposit_amount){
+        return balance+=deposit_amount;
+    }
+}
+   BankAccount.metaClass.withdraw = { int withdraw_amount -> 
+   if(withdraw_amount<=delegate.balance){
+       delegate.balance-=withdraw_amount;
+       return delegate.balance;
+   }
+   else{
+       println "insufficient amount"
+   }
+    }
+    def account = new BankAccount();
+    Scanner scanner = new Scanner(System.in);
+    print "enter amount to deposit ";
+    int deposit_amount = scanner.nextInt();
+    print "enter amount to withdraw ";
+    int withdraw_amount = scanner.nextInt();
+    
+println"balance : ${ account.deposit(deposit_amount)}";
+println " balance : ${account.withdraw(withdraw_amount)}";
