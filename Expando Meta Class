@@ -1,0 +1,5 @@
+def person = new Expando()
+person.name = "Sobi"
+person.welcome = { -> println "hello $name" }
+println person.name
+person.welcome()
