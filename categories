@@ -1,0 +1,9 @@
+class Concat{
+  static String print(String s){
+      s+" hello "
+  } 
+}
+use(Concat){
+    println "sobi".print() 
+    
+}
