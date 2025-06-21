@@ -1,0 +1,12 @@
+class Laptop{
+    def name= "lenova"
+    def propertyMissing(String name){
+       return  "property $name in not present"
+    }
+    void type(){
+        println " typing "
+    }
+}
+def lap = new Laptop()
+println lap.name
+println lap.series
