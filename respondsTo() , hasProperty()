@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Student{
+    def name ;
+    def grade ;
+    Student(String name,int grade){
+        this.name=name;
+        this.grade=grade;
+    }
+    void study(){
+         if (grade >= 10 && grade <= 12) {
+            println "$name: Special class upto 7:00 PM for 10 to 12th grade"
+        } else {
+            println "$name: No special class"
+        }
+    }
+}
+Scanner sc = new Scanner (System.in);
+println "Enter your name"
+def st_name=sc.nextLine();
+println "Enter your grade(1 to 12)"
+def st_grade = sc.nextInt();
+def std = new Student(st_name,st_grade);
+std.study();
+println std.respondsTo("rest");
+println hasProperty("DOB");
+println hasProperty("grade");
