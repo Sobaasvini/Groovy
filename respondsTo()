@@ -1,0 +1,18 @@
+class Person{
+    def name = "sobi";
+    def sayhello(String name){
+        println "hello $name"
+    }
+    def walk(String name){
+        println "$name is walking"
+    }
+}
+def person = new Person();
+def result = { 
+    if(person.respondsTo("walk",person.name)){
+        person.walk(person.name);
+    }
+    else{
+        "Method not found"
+    }}
+result()    
