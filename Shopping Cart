@@ -1,0 +1,35 @@
+@groovy.transform.ToString (to transform as string)
+class Product{
+    String product
+    int price
+    int quantity
+    int total(){
+        return price*quantity
+    }
+    // String toString(){
+    //     "$product x $quantity =${total()}"(another to transform as string)
+    }
+}
+class Ajio{
+    List<Product> products=[]
+    void product (String product,int price,int quantity){
+        products<<new Product(product:product,price:price,quantity:quantity)
+    }
+    void showCart(){
+        println "Welcome to ajio cart page"
+        products.each{println it}
+        def total = products.sum{it.total()}
+        println "Total Amount: $total"
+    }
+}
+def cart(Closure closure){
+    def ajio = new Ajio()
+     closure.delegate = ajio 
+    closure.resolveStrategy=Closure.DELEGATE_FIRST
+    closure()
+    ajio.showCart()
+}
+cart{
+    product 'Laptop' , 80000 , 1
+    product 'mouse' , 500 ,2
+}
